@@ -1,0 +1,12 @@
+﻿title: chapter1_p1
+position: 12,12
+---
+Hệ thống: Nếu bạn đang đọc được dòng chữ này, hệ thống Yarn hoạt động hoàn hảo!
+Hệ thống: Click chuột để tiếp tục nhé.
+Hệ thống: OK, lỗi 100% nằm ở file kịch bản cũ của bạn.
+-> lua chon 1
+    an com khong
+-> lua chon 2
+    ccmm
+<<jump chapter1_p2>>
+===

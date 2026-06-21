@@ -1,0 +1,14 @@
+{
+    "projectFileVersion": 4,
+    "sourceFiles": [
+        "Chapter_01/Chapter1_p1.yarn",
+        "Chapter_01/Chapter1_p2.yarn",
+        "Chapter_01/Chapter1_p3.yarn"
+    ],
+    "excludeFiles": [],
+    "localisation": {},
+    "baseLanguage": "en",
+    "compilerOptions": {
+        "diagnosticsSeverity": {}
+    }
+}

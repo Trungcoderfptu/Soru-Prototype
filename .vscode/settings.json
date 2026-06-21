@@ -1,0 +1,128 @@
+{
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.vs": true,
+        "**/.gitmodules": true,
+        "**/.vsconfig": true,
+        "**/*.booproj": true,
+        "**/*.pidb": true,
+        "**/*.suo": true,
+        "**/*.user": true,
+        "**/*.userprefs": true,
+        "**/*.unityproj": true,
+        "**/*.dll": true,
+        "**/*.exe": true,
+        "**/*.pdf": true,
+        "**/*.mid": true,
+        "**/*.midi": true,
+        "**/*.wav": true,
+        "**/*.gif": true,
+        "**/*.ico": true,
+        "**/*.jpg": true,
+        "**/*.jpeg": true,
+        "**/*.png": true,
+        "**/*.psd": true,
+        "**/*.tga": true,
+        "**/*.tif": true,
+        "**/*.tiff": true,
+        "**/*.3ds": true,
+        "**/*.3DS": true,
+        "**/*.fbx": true,
+        "**/*.FBX": true,
+        "**/*.lxo": true,
+        "**/*.LXO": true,
+        "**/*.ma": true,
+        "**/*.MA": true,
+        "**/*.obj": true,
+        "**/*.OBJ": true,
+        "**/*.asset": true,
+        "**/*.cubemap": true,
+        "**/*.flare": true,
+        "**/*.mat": true,
+        "**/*.meta": true,
+        "**/*.prefab": true,
+        "**/*.unity": true,
+        "build/": true,
+        "Build/": true,
+        "Library/": true,
+        "library/": true,
+        "obj/": true,
+        "Obj/": true,
+        "Logs/": true,
+        "logs/": true,
+        "ProjectSettings/": true,
+        "UserSettings/": true,
+        "temp/": true,
+        "Temp/": true
+    },
+    "files.associations": {
+        "*.asset": "yaml",
+        "*.meta": "yaml",
+        "*.prefab": "yaml",
+        "*.unity": "yaml",
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.sln": "*.csproj",
+        "*.slnx": "*.csproj"
+    },
+    "dotnet.defaultSolution": "Soru Prototype.slnx",
+    "cSpell.enableFiletypes": [
+        "yarnspinner"
+    ],
+    "cSpell.languageSettings": [
+        {
+            "languageId": "yarnspinner",
+            "patterns": [
+                {
+                    "name": "yarn-commands",
+                    "pattern": "/<<[^>]*>>/g"
+                },
+                {
+                    "name": "yarn-expressions",
+                    "pattern": "/\\{[^}]*\\}/g"
+                },
+                {
+                    "name": "yarn-variables",
+                    "pattern": "/\\$[a-zA-Z_][a-zA-Z0-9_]*/g"
+                },
+                {
+                    "name": "yarn-markup",
+                    "pattern": "/\\[[^\\]]*\\]/g"
+                },
+                {
+                    "name": "yarn-hashtags",
+                    "pattern": "/#[a-zA-Z_][a-zA-Z0-9_:-]*/g"
+                },
+                {
+                    "name": "yarn-node-markers",
+                    "pattern": "/^(---|===)$/gm"
+                },
+                {
+                    "name": "yarn-headers",
+                    "pattern": "/^(title|tags|position|color|colorID|tracking|custom|style):.*/gm"
+                },
+                {
+                    "name": "yarn-character-names",
+                    "pattern": "/^\\s*[A-Za-z_][A-Za-z0-9_]*(?=:)/gm"
+                },
+                {
+                    "name": "yarn-comments",
+                    "pattern": "/\\/\\/.*$/gm"
+                }
+            ],
+            "ignoreRegExpList": [
+                "yarn-commands",
+                "yarn-expressions",
+                "yarn-variables",
+                "yarn-markup",
+                "yarn-hashtags",
+                "yarn-node-markers",
+                "yarn-headers",
+                "yarn-character-names",
+                "yarn-comments"
+            ]
+        }
+    ]
+}

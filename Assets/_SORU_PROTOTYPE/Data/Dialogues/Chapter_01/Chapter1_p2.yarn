@@ -1,0 +1,20 @@
+﻿title: chapter1_p2
+position: -983,-90
+---
+Thời gian: Ngày 6/6/2026
+Địa điểm: Một quán mì cay tại Hòa Bình.
+<<play_bgm bgm_vntest>>
+Trung: Má nó nữa, anh em mình học hành bao công mà nó dám bảo mình bán mạng 12 ngày làm hộ cái đồ án rồi ném cho mình 3 củ. Vãi thật.
+Vương: Thật, đã 3 củ còn chia đôi.
+(Các lời thoại nhảm của 2 nhân vật kéo dài cuộc trò chuyện, xây dựng tính cách...)
+<<trigger_event time_skip_short>>
+Trung: Ê Vương, vụ thi bằng phần mềm ý. Vãi thật có thằng chẳng học hành gì nó mua tool ý, vc nó lăn chuột cái xong mẹ hết luôn. Ảo thật.
+Vương: Đệt thế học hành cho gì nữa.
+Trung: Kể ra trường nhiều khi cũng có nguyên 1 bộ phận điều tra và chống bọn này mà chẳng làm được gì cả. Vẫn nhan nhản đấy, chán vãi.
+Vương: Hay anh em mình nghiên cứu làm được quả dự án chống hack. Ngon luôn, bú đẫm.
+Trung: Nghe ngon đấy chứ, mà mày cũng biết về AI mà, ứng dụng luôn. Thay vì an ninh mạng chống AI sao anh em mình không dùng AI để làm an ninh mạng chống con người luôn, hẹ hẹ.
+Vương: Hợp lý luôn, triển thôi!
+2 người tiếp tục vừa nói chuyện vừa ăn, sau đó tiếp tục bàn về dự án ở quán nước, vừa bàn vừa chơi TFT.
+<<trigger_event fade_to_black>>
+<<jump chapter1_p3>>
+===

@@ -1,0 +1,29 @@
+﻿title: chapter1_p3
+---
+Thời gian: Ngày 7/6/2026
+Địa điểm: Ký túc xá FPT.
+(Sáng hôm sau, xuất hiện nhân vật Huy nấu ăn cho cả phòng. Mọi người trò chuyện vui vẻ).
+<<trigger_event time_skip_night>>
+Tối hôm đó, Vương thức khuya đợi train xong model AI.
+Nhận được 1 mail với ngôn ngữ kỳ lạ đính kèm file .echo. Vương cố giải bằng ChatGPT nhưng thất bại, quay lại tab thì mail biến mất.
+Quay lại cmd, tiến độ train nhảy vọt từ 117/500 lên 500/500. Model hoạt động cực kỳ tốt.
+Mở File Manager kiểm tra, Vương thấy file LSTM_model.pth và file prototype1.echo nằm ngay bên dưới.
+Vương sao lưu bài tập ra USB, rút ra nhanh chóng. Tò mò, Vương nhấp đúp chuột vào file prototype1.echo.
+Ngay khi Vương vừa nhấp đúp chuột, hệ thống tản nhiệt trên cỗ máy đột ngột rú lên từng hồi gắt gỏng như động cơ phản lực.
+<<trigger_event play_sfx_pc_fan_roar>>
+Trung lột tai nghe ra, nhăn mặt huých nhẹ ghế Vương
+Trung: Má, nửa đêm mày chạy cái tiến trình quỷ gì mà máy rú ầm lên thế Vương? Tắt bớt đi không thằng Huy nó tỉnh, mai nó còn đi học sớm!
+Màn hình máy tính của Trung mở VS Code đột nhiên nháy liên tục. Hàng vạn dòng mã nguồn màu xanh lục tự động tuôn trào đè lên bài cũ với tốc độ chóng mặt.
+<<trigger_event play_sfx_glitch>>
+<<trigger_event show_vfx_green_code>>
+Trung: Cái đệt gì thế kia? Máy tao bị hack à?!
+Trung hoảng hốt lao vội về phía bàn mình nhưng bàn phím đã bị khóa cứng hoàn toàn.
+Trên màn hình máy tính của Vương, các dải dữ liệu cuộn xoáy lại. Một cô hầu gái tai mèo từ từ xuất hiện.
+<<trigger_event show_character_maid>>
+Cô hầu gái chớp mắt, nhìn thẳng ra ngoài màn hình.
+Hầu gái ảo: Xác nhận kích hoạt thành công. Xin chào chủ nhân, tôi có thể giúp gì cho ngài?
+Hai thằng sinh viên IT đứng chết trân, mặt ngớ ra nhìn nhau. Đêm định mệnh chính thức bắt đầu.
+<<trigger_event play_bgm_main_theme>>
+<<trigger_event fade_to_black>>
+// --- KẾT THÚC CHAPTER 1 ---
+===
