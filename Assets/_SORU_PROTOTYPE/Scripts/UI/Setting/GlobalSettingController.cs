@@ -10,6 +10,8 @@ namespace SoruPrototype.UI.Global
         [SerializeField] private GameObject settingPanel; // Gắn chính bản thân cái Panel chứa UI vào đây
         [SerializeField] private Slider bgmSlider;
         [SerializeField] private Slider sfxSlider;
+        [SerializeField] private Toggle bgmMuteToggle;
+        [SerializeField] private Toggle sfxMuteToggle;
         
         [Header("Buttons")]
         [SerializeField] private Button closeButton;
@@ -31,6 +33,8 @@ namespace SoruPrototype.UI.Global
             // Đăng ký các sự kiện cho UI
             if (bgmSlider != null) bgmSlider.onValueChanged.AddListener(OnBgmChanged);
             if (sfxSlider != null) sfxSlider.onValueChanged.AddListener(OnSfxChanged);
+            if (bgmMuteToggle != null) bgmMuteToggle.onValueChanged.AddListener(OnBgmMuteChanged);
+            if (sfxMuteToggle != null) sfxMuteToggle.onValueChanged.AddListener(OnSfxMuteChanged);
             if (closeButton != null) closeButton.onClick.AddListener(HideSettingPanel);
             if (backToTitleButton != null) backToTitleButton.onClick.AddListener(OnBackToTitleClicked);
             
@@ -45,8 +49,13 @@ namespace SoruPrototype.UI.Global
             // TRƯỚC KHI HIỂN THỊ: Cập nhật lại thanh Slider cho đúng với Data thực tế từ AudioManager
             if (AudioManager.Instance != null)
             {
-                if (bgmSlider != null) bgmSlider.value = AudioManager.Instance.GetBGMVolume();
-                if (sfxSlider != null) sfxSlider.value = AudioManager.Instance.GetSFXVolume();
+                // [MODIFIED] Đổi sang SetValueWithoutNotify để không vô tình kích hoạt sự kiện onValueChanged khi bật UI
+                if (bgmSlider != null) bgmSlider.SetValueWithoutNotify(AudioManager.Instance.GetBGMVolume());
+                if (sfxSlider != null) sfxSlider.SetValueWithoutNotify(AudioManager.Instance.GetSFXVolume());
+
+                // [ADD] Cập nhật giao diện của 2 Toggle dựa theo Data lưu trữ
+                if (bgmMuteToggle != null) bgmMuteToggle.SetIsOnWithoutNotify(AudioManager.Instance.IsBGMMuted());
+                if (sfxMuteToggle != null) sfxMuteToggle.SetIsOnWithoutNotify(AudioManager.Instance.IsSFXMuted());
             }
             
             // Bật Panel lên
@@ -67,6 +76,16 @@ namespace SoruPrototype.UI.Global
         private void OnSfxChanged(float value)
         {
             if (AudioManager.Instance != null) AudioManager.Instance.SetSFXVolume(value);
+        }
+        // [ADD] Hàm gọi xuống Core khi người dùng tương tác với Toggle UI
+        private void OnBgmMuteChanged(bool isMuted)
+        {
+            if (AudioManager.Instance != null) AudioManager.Instance.ToggleMuteBGM(isMuted);
+        }
+
+        private void OnSfxMuteChanged(bool isMuted)
+        {
+            if (AudioManager.Instance != null) AudioManager.Instance.ToggleMuteSFX(isMuted);
         }
 
         private void OnBackToTitleClicked()

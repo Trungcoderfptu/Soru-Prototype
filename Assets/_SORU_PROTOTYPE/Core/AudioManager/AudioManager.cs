@@ -29,6 +29,8 @@ namespace SoruPrototype.Core
         [SerializeField] private SoundProfile[] bgmLibrary;
         [SerializeField] private SoundProfile[] sfxLibrary;
 
+        
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -95,6 +97,8 @@ namespace SoruPrototype.Core
         }
         private const string BGM_KEY = "BGM_Volume";
         private const string SFX_KEY = "SFX_Volume";
+        private const string BGM_MUTE_KEY = "BGM_Mute";
+        private const string SFX_MUTE_KEY = "SFX_Mute";
 
         private void Start()
         {
@@ -123,10 +127,35 @@ namespace SoruPrototype.Core
         public float GetBGMVolume() => PlayerPrefs.GetFloat(BGM_KEY, 1f); // Mặc định là 1 (100%)
         public float GetSFXVolume() => PlayerPrefs.GetFloat(SFX_KEY, 1f);
 
+        // [ADD] Hàm xử lý Mute AudioSource và lưu trữ trạng thái
+        public void ToggleMuteBGM(bool isMuted)
+        {
+            if (bgmSource != null)
+            {
+                bgmSource.mute = isMuted;
+                PlayerPrefs.SetInt(BGM_MUTE_KEY, isMuted ? 1 : 0); // Ép kiểu bool sang int (1 = true, 0 = false)
+            }
+        }
+
+        public void ToggleMuteSFX(bool isMuted)
+        {
+            if (sfxSource != null)
+            {
+                sfxSource.mute = isMuted;
+                PlayerPrefs.SetInt(SFX_MUTE_KEY, isMuted ? 1 : 0);
+            }
+        }
+
+        // [ADD] Getter lấy trạng thái Mute hiện tại từ bộ nhớ
+        public bool IsBGMMuted() => PlayerPrefs.GetInt(BGM_MUTE_KEY, 0) == 1;
+        public bool IsSFXMuted() => PlayerPrefs.GetInt(SFX_MUTE_KEY, 0) == 1;
+
         private void LoadAudioSettings()
         {
             SetBGMVolume(GetBGMVolume());
             SetSFXVolume(GetSFXVolume());
+            ToggleMuteBGM(IsBGMMuted());
+            ToggleMuteSFX(IsSFXMuted());
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿title: chapter1_p1
 position: 12,12
 ---
+<<set_bg bg1>>
 Hệ thống: Nếu bạn đang đọc được dòng chữ này, hệ thống Yarn hoạt động hoàn hảo!
 Hệ thống: Click chuột để tiếp tục nhé.
 Hệ thống: OK, lỗi 100% nằm ở file kịch bản cũ của bạn.
@@ -8,5 +9,16 @@ Hệ thống: OK, lỗi 100% nằm ở file kịch bản cũ của bạn.
     an com khong
 -> lua chon 2
     ccmm
+<<show_char SORU1 NOMAL left>>
+SORU: EHEHE LEFT
+SORU: sang left success
+<<show_char SORU2 NOMAL right>>
+SORU: EHEHE RIGHT
+SORU: sang center success
+<<show_char SORU2 NOMAL center>>
+SORU: CHUẨN BỊ THỬ NGHIỆM
+<<hide_char center>>
+SORU: ĐÃ ẨN NHÂN VẬT CENTER
+<<hide_all_chars>>
 <<jump chapter1_p2>>
 ===

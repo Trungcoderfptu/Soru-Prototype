@@ -4,6 +4,7 @@ position: -983,-90
 Thời gian: Ngày 6/6/2026
 Địa điểm: Một quán mì cay tại Hòa Bình.
 <<play_bgm bgm_vntest>>
+<<set_bg bg2>>
 Trung: Má nó nữa, anh em mình học hành bao công mà nó dám bảo mình bán mạng 12 ngày làm hộ cái đồ án rồi ném cho mình 3 củ. Vãi thật.
 Vương: Thật, đã 3 củ còn chia đôi.
 (Các lời thoại nhảm của 2 nhân vật kéo dài cuộc trò chuyện, xây dựng tính cách...)
